@@ -1,7 +1,7 @@
 import os
-import pyfiglet
 
 from lib import file_operations, time, contact
+from helpers import help, banner
 
 prompt = 'guest@pypmpte'
 NAME = "PyPrompter"
@@ -15,9 +15,9 @@ command = ''
 exit_commands = ['exit']
 retCode = 100
 
-ascii_art = pyfiglet.figlet_format(NAME, font = "slant")
-print(f"Copyright © {NAME} {VERSION_TAG} free and open shell")
-print(ascii_art)
+
+
+banner()
 
 while True:
     current_time = time.currentTime(12)[0]
@@ -41,6 +41,10 @@ while True:
         else:
             os.system("clear")
             retCode = 0
+    
+    elif args[0] == "help":
+        help()
+        retCode = 0
 
     # Basic Operations
     elif args[0] == "ls":
