@@ -1,0 +1,15 @@
+{
+  "commands": [
+    {
+      "name": "whoami",
+      "description": "prints information about the author of this website"
+    },
+    {
+      "name": "contact",
+      "description": "prints contact info"
+    },
+    {
+      "name": ""
+    }
+  ]
+}
